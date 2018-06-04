@@ -1,0 +1,27 @@
+{
+  "name": "nuage_transform",
+  "version": "1.0.0",
+  "description": "Nuage is the web interface to manage your files on any cloud. This repo is the part of nuage which allow it to process media",
+  "main": "config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickael-kerjean/nuage_transform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mickael-kerjean/nuage_transform/issues"
+  },
+  "homepage": "https://github.com/mickael-kerjean/nuage_transform#readme",
+  "dependencies": {
+    "busboy": "^0.2.14",
+    "exiv2": "^0.6.3",
+    "sharp": "^0.20.3"
+  }
+}

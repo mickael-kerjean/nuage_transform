@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="name" name="apple-mobile-web-app-title">
+        <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+
+        <title>Media</title>
+        <meta name="description" content="">
+        <style>
+         body{
+             margin: 0;
+             background: #f6f6f6;
+             color: #626469;
+         }
+         .container{
+             width: 550px;
+             margin: 50px auto 0 auto;
+         }
+         h2{font-weight: normal; text-align: center;}
+         form{
+             background: white;
+             border: 1px solid #e2e2e2;
+             padding: 10px;
+         }
+         input{
+             margin: 5px 0 0 0;
+         }
+         input[type="submit"]{
+             width: 100%;
+             background: #9ad1ed;
+             border: none;
+             padding: 5px 0;
+             font-size: 1em;
+             color: white;
+         }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2> Media Transcode </h2>
+            <form method="POST" action="?size=250" enctype="multipart/form-data">
+                <label>
+                    <input type="file" name="image" />
+                </label>
+                <input type="submit"/>
+            </form>
+        </div>
+    </body>
+</html>

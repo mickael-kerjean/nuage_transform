@@ -1,0 +1,14 @@
+server/public/js
+server/public/index.html
+node_modules/
+babel_cache/
+.DS_Store
+\#*\#
+.\#*
+*.log
+*~
+*.swp
+*.swo
+.tern-port
+package-lock.json
+.tern-project.js
