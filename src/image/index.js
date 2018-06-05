@@ -22,7 +22,7 @@ module.exports.transcode_raw = function(mimeType, size, meta, res){
      * very often good enough
      */
     if(isRaw(mimeType) === false){
-        res.setHeader("Cache-Control", "max-age=600");
+        res.setHeader("Cache-Control", "max-age=604800");
         return new Transform({
             transform: function (chunk, encoding, callback){
                 this.emit("ready");
@@ -44,12 +44,9 @@ module.exports.transcode_raw = function(mimeType, size, meta, res){
             let self = this;
             file.end(() => {
                 return extract_preview.call(this, filename, width, meta)
-                    .then(() => {
-                        return res.setHeader("Cache-Control", "max-age=600");
-                        return null;
-                    })
+                    .then(() => res.setHeader("Cache-Control", "max-age=604800"))
                     .catch((e) => {
-                        width < 400 ? res.setHeader("Cache-Control", "max-age=43200") : res.setHeader("Cache-Control", "max-age=600")
+                        width < 400 ? res.setHeader("Cache-Control", "max-age=2592000") : res.setHeader("Cache-Control", "max-age=604800");
                         return transcode_tiff.call(this, filename, width, meta)
                     })
                     .then(() => complete(filename, done));
