@@ -9,6 +9,7 @@ module.exports.transcode_image = function(size, meta){
 
     const ret = sharp()
           .resize(width, height)
+          .rotate()
           .withoutEnlargement()
           .jpeg()
     if(meta === "true") return ret.withMetadata();
